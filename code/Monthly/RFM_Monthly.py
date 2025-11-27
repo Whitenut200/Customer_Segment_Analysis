@@ -15,12 +15,12 @@ builder = (
     SparkSession.builder
     .appName("delta-metrics")
     .master("local[*]")  # 로컬 전체 코어 사용
-    # 🔹 Delta Lake 설정 (기존 그대로 유지)
+    # Delta Lake 설정 (기존 그대로 유지)
     .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
     .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
-    # 🔹 JDBC(PostgreSQL) 드라이버
+    # JDBC(PostgreSQL) 드라이버
     .config("spark.jars", r"D:\project\segment\postgresql-42.7.8.jar")
-    # 🔹 메모리/성능 설정 추가
+    # 메모리/성능 설정 추가
     .config("spark.driver.memory", "12g")              # 드라이버 메모리 증가
     .config("spark.sql.shuffle.partitions", "300")     # 셔플 파티션 수 조정
 )

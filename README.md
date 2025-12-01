@@ -5,7 +5,6 @@
   <img src="main.png" alt="Path 대시보드" width="45%"/>
 </p>
 
----
 
 ## 프로젝트 개요
 본 프로젝트는 **Kaggle E-commerce Behavior 데이터(약 4천만 건)**를 활용해  

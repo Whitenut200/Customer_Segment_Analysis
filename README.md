@@ -1,8 +1,8 @@
 # RFM 고객 세그먼트 분석 대시보드  
 
 <p align="center">
-  <img src="cover.png" alt="CTV 대시보드" width="45%"/>
-  <img src="main.png" alt="Path 대시보드" width="45%"/>
+  <img src="cover.png" alt="CTV 대시보드" width="48%"/>
+  <img src="main.png" alt="Path 대시보드" width="48%"/>
 </p>
 
 

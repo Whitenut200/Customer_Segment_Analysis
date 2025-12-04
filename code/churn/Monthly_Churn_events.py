@@ -113,16 +113,23 @@ for snap in snapshot_months:
         SELECT * FROM events_7d
         UNION ALL
         SELECT * FROM events_14d
-    )
+    ),
+    result as (
     SELECT
         segment,
         event_type,
         interval,
         SUM(event_cnt) AS event_cnt
     FROM total
-    GROUP BY segment, event_type, interval
+    GROUP BY segment, event_type, interval)
+    select 
+        event_type,
+        interval, 
+        sum("sum(event_cnt)") as cnt 
+    from public.chrun_interval 
+    group by 1,2 order by 2,1 asc
     """
-
+    
     churn_interval_df = spark.sql(churn_interval_sql)
     all_data.append(churn_interval_df)
 

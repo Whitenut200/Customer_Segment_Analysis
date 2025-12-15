@@ -1,3 +1,7 @@
+# **H0:** View 수·Cart 수·구매한 카테고리 수는 초기 유지율에 영향을 주지 않는다. 
+# **H1:** View 수·Cart 수·구매한 카테고리 수는 초기 유지율에 유의한 영향을 준다.
+
+
 from pyspark.sql import SparkSession, functions as F
 from delta import configure_spark_with_delta_pip
 from pyspark.sql import SparkSession
